@@ -7,9 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<Car_Rental_SystemContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("myconnection")));
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<ICarImageService, CarImageService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<ICarSpecificationService, CarSpecificationService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
