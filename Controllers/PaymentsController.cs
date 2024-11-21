@@ -7,10 +7,10 @@ namespace Car_Rental_System.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PaymentController : ControllerBase
+    public class PaymentsController : ControllerBase
     {
         public readonly IPaymentService _service;
-        public PaymentController(IPaymentService service)
+        public PaymentsController(IPaymentService service)
         {
             _service = service;
         }

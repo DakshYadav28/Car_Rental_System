@@ -21,7 +21,7 @@ namespace Car_Rental_System.Models
         public DateTime? LastLogin { get; set; }
         public string? PaymentDetails { get; set; }
 
-        public virtual ICollection<Reservation> Reservations { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Reservation>? Reservations { get; set; }
+        public virtual ICollection<Review>? Reviews { get; set; }
     }
 }

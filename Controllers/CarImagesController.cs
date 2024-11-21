@@ -7,10 +7,10 @@ namespace Car_Rental_System.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarImageController : ControllerBase
+    public class CarImagesController : ControllerBase
     {
         private readonly ICarImageService _service;
-        public CarImageController(ICarImageService service)
+        public CarImagesController(ICarImageService service)
         {
             _service = service;
 
